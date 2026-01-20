@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks & Progress</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <div id="menu"></div>
+
+  <div class="content">
+    <h1>📝 Tasks & Progress</h1>
+<h4>Stay organized, track progress, and never miss important academic tasks.
+</h4>
+    <section class="card">
+      <input id="taskTitle" placeholder="Task name" />
+      <input id="taskDate" type="date" />
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>📊 Progress</h2>
+      <div class="progress-container">
+        <div id="progressBar"></div>
+      </div>
+      <p id="progressText"></p>
+    </section>
+  </div>
+
+  <script type="module" src="js/todo.js"></script>
+  <script src="js/theme.js"></script>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>

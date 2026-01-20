@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <div id="menu"></div>
+
+  <div class="content">
+    <h1>📅 AI Study Planner</h1>
+<h4>Personalized study schedules designed around your syllabus, time, and exams.
+</h4>
+    <section class="card">
+      <input id="subjects" placeholder="Subjects (e.g. DBMS, OS)" />
+      <input id="examDate" type="date" />
+      <input id="hours" type="number" placeholder="Daily study hours" />
+
+      <button onclick="generatePlan()">Generate Plan</button>
+      <p id="planStatus" class="helper-text"></p>
+<div id="planOutput" class="ai-output"></div>
+
+      <button onclick="savePlan()">Save Study Plan</button>
+    </section>
+
+    <section class="card">
+      <h2>📚 Saved Study Plans</h2>
+      <button onclick="loadSavedPlans()">View Saved Plans</button>
+      <div id="savedPlans"></div>
+       
+    </section>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" src="js/planner.js"></script>
+  <script src="js/theme.js"></script>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>

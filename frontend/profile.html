@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+<div id="menu"></div>
+
+<div class="content">
+  <h1>👤 Profile</h1>
+  <h4>Manage your academic identity and preferences</h4>
+
+  <section class="card">
+    <input id="fullName" placeholder="Full Name" />
+    <input id="college" placeholder="College / University" />
+    <input id="branch" placeholder="Branch (e.g. CSE)" />
+    <input id="semester" placeholder="Semester (e.g. 4)" />
+    <input id="studyHours" type="number" placeholder="Daily Study Hours" />
+    <input id="goal" placeholder="Target Goal (SPI / Exam)" />
+
+    <button onclick="saveProfile()">Save Profile</button>
+    <p id="profileStatus" class="helper-text"></p>
+  </section>
+
+  <section class="card">
+    <button onclick="logout()">🚪 Logout</button>
+  </section>
+</div>
+
+<script type="module" src="js/profile.js"></script>
+<script src="js/theme.js"></script>
+
+<script>
+  fetch("menu.html")
+    .then(res => res.text())
+    .then(html => document.getElementById("menu").innerHTML = html);
+</script>
+
+</body>
+</html>

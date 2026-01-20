@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ask AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <div id="menu"></div>
+
+  <div class="content">
+    <h1>🤖 Ask AI</h1>
+ <h4>Get instant academic help, explanations, and exam-oriented answers.
+</h4>
+   <section class="card">
+  <textarea id="chatInput" placeholder="Ask any academic question..."></textarea>
+  <button onclick="askAI()">Ask AI</button>
+
+  <p id="chatStatus" class="helper-text"></p>
+
+  <div id="chatOutput" class="ai-output"></div>
+</section>
+
+      
+    <h3>Your AI assistant is ready to help you learn smarter.
+</h3>
+  </div>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script src="js/theme.js"></script>
+<script src="js/chatbot.js"></script>
+<!-- OR planner.js / summarizer.js -->
+
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>

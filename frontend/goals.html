@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goal Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <!-- MENU -->
+  <div id="menu"></div>
+
+  <!-- PAGE CONTENT -->
+  <div class="content">
+    <h1>🎯 Academic Goals</h1>
+<h4>Define your academic targets and let AI guide your strategy.
+</h4>
+    <section class="card">
+      <p>Set your academic goal and let AI guide your strategy.</p>
+
+      <select id="goalType">
+        <option value="">Select Goal Type</option>
+        <option value="CGPA">CGPA</option>
+        <option value="SPI">SPI</option>
+        <option value="Exam Pass">Exam Pass</option>
+        <option value="Rank">Rank</option>
+      </select>
+
+      <input id="goalTarget" placeholder="Target (e.g. 8.5 CGPA)" />
+
+      <button onclick="saveGoal()">Save Goal</button>
+    </section>
+
+    <section class="card">
+      <h2>🤖 AI Goal Strategy</h2>
+      <button onclick="getGoalStrategy()">Generate Strategy</button>
+      <!-- <pre id="goalOutput"></pre> -->
+       <div id="goalOutput" class="ai-output"></div>
+    </section>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Scripts -->
+  <script type="module" src="js/goals.js"></script>
+  <script src="js/theme.js"></script>
+
+  <!-- Load menu -->
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>

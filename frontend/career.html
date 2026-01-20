@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Career Guidance</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <!-- MENU -->
+  <div id="menu"></div>
+
+  <!-- PAGE CONTENT -->
+  <div class="content">
+    <h1>🚀 Career Guidance</h1>
+<h4>Connect your academics with future career opportunities.
+</h4>
+    <section class="card">
+      <p>Get AI-powered career guidance based on your interests.</p>
+
+      <input id="branch" placeholder="Your branch (e.g. Computer Engineering)" />
+      <input id="interest" placeholder="Your interest (e.g. AI, Web, Data)" />
+
+      <button onclick="getCareerGuidance()">Get Career Roadmap</button>
+    </section>
+
+    <section class="card">
+      <h2>🎯 AI Career Roadmap</h2>
+      <!-- <pre id="careerOutput"></pre> -->
+      <div id="careerOutput" class="ai-output"></div>
+
+    </section>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/career.js"></script>
+  <script src="js/theme.js"></script>
+
+  <!-- Load menu -->
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>

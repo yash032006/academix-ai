@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wellness & Burnout Monitor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <!-- MENU -->
+  <div id="menu"></div>
+
+  <!-- PAGE CONTENT -->
+  <div class="content">
+    <h1>🧘 Wellness & Burnout Monitor</h1>
+ <h4>Balance productivity with mental well-being.
+</h4>
+    <section class="card">
+      <p>Tell us about your current study routine.</p>
+
+      <input id="dailyHours" type="number" placeholder="Daily study hours (e.g. 6)" />
+      <input id="sleepHours" type="number" placeholder="Sleep hours per day (e.g. 7)" />
+
+      <select id="stressLevel">
+        <option value="">Stress level</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <button onclick="analyzeWellness()">Analyze Wellness</button>
+    </section>
+
+    <section class="card">
+      <h2>🧠 Wellness Analysis</h2>
+      <!-- <pre id="wellnessOutput"></pre> -->
+      <div id="wellnessOutput" class="ai-output"></div>
+    </section>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Scripts -->
+  <script src="js/wellness.js"></script>
+  <script src="js/theme.js"></script>
+
+  <!-- Load menu -->
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>

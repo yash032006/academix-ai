@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AcademiX AI – Smart Academic OS</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- BACKGROUND GLOW -->
+<div class="bg-glow">
+  <span class="glow glow-1"></span>
+  <span class="glow glow-2"></span>
+  <span class="glow glow-3"></span>
+</div>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar glass">
+    <div class="nav-left">🎓 AcademiX AI</div>
+
+    <div class="nav-center">
+      <a href="#features">Features</a>
+    </div>
+
+   <div class="nav-right">
+  <button class="icon-btn" onclick="toggleDark()">🌙</button>
+  <a href="index.html" class="link">Login</a>
+  <a href="index.html" class="btn-primary">Get Started</a>
+</div>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>AI Academic Assistant<br>for Smarter Learning</h1>
+    <p>
+     Plan smarter, learn faster, achieve more. AcademiX AI transforms how you study with intelligent planning, personalized guidance, and real-time collaboration.
+    </p>
+
+    <a href="index.html" class="btn-primary big">Get Started→</a>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="features fade-up">
+
+    <h2>Everything You Need for Academic Success</h2>
+
+    <div class="feature-grid">
+
+      <div class="feature-card glass fade-up">
+
+        <h3>📅 AI Study Planner</h3>
+        <p>Personalized study plans based on syllabus and exams.</p>
+      </div>
+
+      <div class="feature-card glass fade-up">
+
+        <h3>🤖 Ask AI</h3>
+        <p>Instant answers, explanations, and exam-ready responses.</p>
+      </div>
+
+      <div class="feature-card glass fade-up">
+
+        <h3>📄 Smart Summaries</h3>
+        <p>Convert long notes into short revision-friendly summaries.</p>
+      </div>
+
+      <div class="feature-card glass fade-up">
+
+        <h3>🧪 Mock Tests</h3>
+        <p>Practice with AI-generated exam-oriented questions.</p>
+      </div>
+
+     <div class="feature-card glass fade-up">
+
+        <h3>📝 Tasks</h3>
+        <p>Track tasks, deadlines, and academic progress.</p>
+      </div>
+       <div class="feature-card glass fade-up">
+
+        <h3>👥 Groups</h3>
+        <p>Collaborate with classmates in subject-wise study groups.</p>
+      </div>
+        <div class="feature-card glass fade-up">
+
+        <h3>🧘 Wellness Monitor</h3>
+        <p>Detect burnout and maintain healthy study balance.</p>
+      </div>
+
+     <div class="feature-card glass fade-up">
+
+        <h3>🚀 Career Guidance</h3>
+        <p>AI-powered career roadmaps aligned with your interests.</p>
+      </div>
+
+    </div>
+  </section>
+<!-- CTA SECTION -->
+<section class="cta-section fade-up">
+  <div class="cta-card">
+    <h2>Ready to Transform Your Studies?</h2>
+
+    <p>
+      Join with students who've already improved their grades and
+      reduced study stress with AcademiX AI.
+    </p>
+
+    <a href="index.html" class="cta-btn">
+      Start Your Free Trial <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+  <!-- QUOTES -->
+  <section class="quotes-inline fade-up">
+  <div class="quotes-track">
+    <span>“Study smart, not hard.”</span>
+    <span>“Consistency beats last-minute effort.”</span>
+    <span>“Your future is built one session at a time.”</span>
+    <span>“AI + Discipline = Success.”</span>
+  </div>
+</section>
+
+<script src="js/theme.js"></script>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Group Chat</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <div id="menu"></div>
+
+  <div class="content">
+    <h1>👥 Group Study Chat</h1>
+<h4>Learn better together through subject-wise study groups.
+</h4>
+    <section class="card">
+      <input id="groupName" placeholder="New group name" />
+      <button onclick="createGroup()">Create Group</button>
+
+      <p><strong>Available Groups:</strong></p>
+      <ul id="groupList"></ul>
+
+      <div id="currentGroup"></div>
+
+      <div id="chatBox" style="display:none;">
+        <div id="messages"></div>
+        <input id="messageInput" placeholder="Type message" />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="js/group.js"></script>
+  <script src="js/theme.js"></script>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>

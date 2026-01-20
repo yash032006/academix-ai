@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summarizer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <div id="menu"></div>
+
+  <div class="content">
+    <h1>📄 AI Summarizer</h1>
+ <h4>Turn long notes, textbooks, or articles into clear, exam-ready summaries.
+</h4>
+    <section class="card">
+      <textarea id="sumInput" placeholder="Paste your notes here..."></textarea>
+      <button onclick="summarize()">Summarize</button>
+      <p id="sumStatus" class="helper-text"></p>
+<div id="sumOutput" class="ai-output"></div>
+
+      
+      <button onclick="saveSummary()">Save Summary</button>
+    </section>
+     <h3>You can save this summary and revisit it anytime from your study plans.
+</h3>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" src="js/summarizer.js"></script>
+  <script src="js/theme.js"></script>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>

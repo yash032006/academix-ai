@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Mock Test</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="feature-page dark">
+
+<div class="feature-mesh"></div>
+
+  <!-- MENU -->
+  <div id="menu"></div>
+
+  <!-- PAGE CONTENT -->
+  <div class="content">
+    <h1>📝 AI Mock Test</h1>
+<h4>Practice exam-oriented questions generated instantly by AI.
+</h4>
+    <section class="card">
+      <p>Generate subject-wise practice questions using AI.</p>
+
+      <input id="mockSubject" placeholder="Enter subject (e.g. DBMS)" />
+      <button onclick="generateMock()">Generate Mock Test</button>
+
+      <div id="mockStatus"></div>
+      <!-- <pre id="mockOutput"></pre> -->
+       <div id="mockOutput" class="ai-output"></div>
+    </section>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Scripts -->
+  <script src="js/mock.js"></script>
+  <script src="js/theme.js"></script>
+
+  <!-- Load menu -->
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("menu").innerHTML = html);
+  </script>
+
+</body>
+</html>
