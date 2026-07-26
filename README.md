@@ -2,6 +2,8 @@
 
 AcademiX AI is a full-stack AI-powered academic assistant that helps students plan studies, learn concepts, track progress, manage stress, and align academics with career goals.
 
+Live Link: https://academix-ai-umber.vercel.app/
+
 ## 🚀 Features
 - AI Chat Assistant (Google Gemini)
 - AI Study Planner
